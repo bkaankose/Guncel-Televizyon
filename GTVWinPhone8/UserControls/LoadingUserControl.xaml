@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CustomLoading.LoadingUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:CustomLoading"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="120" d:DesignWidth="120">
+    <UserControl.Resources>
+        <converters:FontSizeConverter x:Key="sizeConverter" />
+        <!--<Style TargetType="TextBlock">
+            --><!--<Setter Property="FontSize" Value="2" />--><!--
+            <Setter Property="FontWeight" Value="Light" />
+        </Style>-->
+    </UserControl.Resources>
+    <StackPanel DataContext="{Binding}">
+        <TextBlock x:Name="txtLetter" Foreground="{Binding Linear}" FontFamily="{Binding FontFamily}" Text="{Binding Letter}" FontSize="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <TextBlock Text="{Binding LoadingText}" FontSize="{Binding FontSize}" Foreground="{Binding ConvertedTextColor}"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GTVWinPhone8.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:usercontrols="clr-namespace:CustomLoading"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe WP Light" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Opacity="0.9" BackgroundColor="{StaticResource PhoneBackgroundColor}" Mode="Minimized" >
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="btnFavorites" Text="Favori Kanallarım" Click="btnFavorites_Click"  />
+                <shell:ApplicationBarMenuItem x:Name="btnMail" Text="Iletişim" Click="btnMail_Click" />
+                <shell:ApplicationBarMenuItem x:Name="btnAbout" Text="Hakkında" Click="btnAbout_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <Grid x:Name="LayoutRoot" Margin="0,-1,0,0" Background="{StaticResource PhoneBackgroundBrush}">
+        <Grid x:Name="grid_Loading">
+            <usercontrols:LoadingUserControl x:Name="ctrlLoading" FontSize="35" LoadingText="Yükleniyor" FontFamily="/Fonts/Arial Rounded MT Bold Bold.ttf#Arial Rounded MT Bold" Letter="G" FirstColor="{StaticResource MainThemeColor}" TextColor="{StaticResource MainThemeColor}" SecondColor="{StaticResource PhoneForegroundColor}" VerticalAlignment="Center" />
+        </Grid>
+        <Grid x:Name="grid_Channels" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <controls:Pivot x:Name="mainPivot" Grid.Row="1" HeaderTemplate="{StaticResource pivotItemTemplate}" >
+                <controls:PivotItem Header="Tüm Kanallar" Tag="0" />
+                <controls:PivotItem Header="Ulusal" Tag="1" />
+                <controls:PivotItem Header="Haber" Tag="2" />
+                <controls:PivotItem Header="Sinema" Tag="3" />
+                <controls:PivotItem Header="Spor" Tag="4" />
+                <controls:PivotItem Header="Belgesel" Tag="5" />
+                <controls:PivotItem Header="Çocuk" Tag="6" />
+                <controls:PivotItem Header="Müzik" Tag="7" />
+                <controls:PivotItem Header="Eğlence" Tag="8" />
+                <controls:PivotItem Header="Moda" Tag="9" />
+            </controls:Pivot>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
+
+
+    
+    

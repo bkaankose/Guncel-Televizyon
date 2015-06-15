@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GTVWinPhone8.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Foreground="{StaticResource MainThemeColorBrush}" FontSize="35">
+                <Run Text="" FontFamily="Segoe UI Symbol" />
+                <Run Text=" Hakkında" />
+            </TextBlock>
+            <Button Grid.Row="1" Background="{StaticResource DarkBlack}">
+                <Button.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Images/twitterLogo.png" Width="80" Height="50" Stretch="Fill" />
+                        <TextBlock Text=" Twitter" Grid.Column="1" VerticalAlignment="Center" />
+                    </Grid>
+                </Button.Content>
+            </Button>
+            <Button Grid.Row="2" Background="{StaticResource DarkBlack}">
+                <Button.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Images/instaLogo.png" Width="80" Height="50" Stretch="Uniform" />
+                        <TextBlock Text="Instagram" Grid.Column="1" VerticalAlignment="Center" />
+                    </Grid>
+                </Button.Content>
+            </Button>
+            <TextBlock Text="Burak Kaan Köse" FontSize="22" FontWeight="ExtraLight" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="{StaticResource DarkBlue}" />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

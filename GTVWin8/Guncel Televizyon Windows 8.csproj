@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47CE99FB-E057-49BD-81C4-F1C3025C731F}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTVWin8</RootNamespace>
+    <AssemblyName>GTVWin8</AssemblyName>
+    <DefaultLanguage>tr-TR</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>GTVWin8_StoreKey.pfx</PackageCertificateKeyFile>
+    <NuGetPackageImportStamp>87caff0c</NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/cf96af54-e96e-45ec-8c7c-ce81c3b84f9b/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/GTVWin8</ApplicationInsightsResourceId>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PackageCertificateThumbprint>F86EF2A930552218C0BA5D31EA8D2771F992B4EF</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <AppxPackageDir>C:\Users\HP-P\Desktop\</AppxPackageDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BooleanToColorConverter.cs" />
+    <Compile Include="Converters\BooleanToFavoriteConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityReverseConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\CategoryToImageConverter.cs" />
+    <Compile Include="Converters\DatetimeToCultureDateConverter.cs" />
+    <Compile Include="Converters\MuteStatusToImageConverter.cs" />
+    <Compile Include="Converters\MuteStatusToStringConverter.cs" />
+    <Compile Include="Converters\NotificationReadToColorConverter.cs" />
+    <Compile Include="Converters\NullToEnabledConverter.cs" />
+    <Compile Include="Converters\VolumeConverter.cs" />
+    <Compile Include="Database\SQLite.cs" />
+    <Compile Include="Database\SQLiteAsync.cs" />
+    <Compile Include="DataModels\AppReport.cs" />
+    <Compile Include="DataModels\Channel.cs" />
+    <Compile Include="DataModels\ChannelStreamProgram.cs" />
+    <Compile Include="DataModels\ChannelCategoryItem.cs" />
+    <Compile Include="DataModels\Comment.cs" />
+    <Compile Include="DataModels\Favorites.cs" />
+    <Compile Include="DataModels\Notification.cs" />
+    <Compile Include="DataModels\Report.cs" />
+    <Compile Include="DataModels\ServiceResponse.cs" />
+    <Compile Include="DataModels\Settings.cs" />
+    <Compile Include="DataModels\StreamProgram.cs" />
+    <Compile Include="DataModels\Synchronization.cs" />
+    <Compile Include="GTVCore.cs" />
+    <Compile Include="GTVDialogs.cs" />
+    <Compile Include="GTVService.cs" />
+    <Compile Include="GTVSettings.cs" />
+    <Compile Include="Helpers\NotificationTemplateSelector.cs" />
+    <Compile Include="Interfaces\IGTVCore.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ChannelDetailFlyout.xaml.cs">
+      <DependentUpon>ChannelDetailFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FavoritesUserControl.xaml.cs">
+      <DependentUpon>FavoritesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MailFlyout.xaml.cs">
+      <DependentUpon>MailFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NotificationsUserControl.xaml.cs">
+      <DependentUpon>NotificationsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\WatchPageViewModel.cs" />
+    <Compile Include="WatchPage.xaml.cs">
+      <DependentUpon>WatchPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\Categories\Belgesel.png" />
+    <Content Include="Assets\Categories\Eğlence.png" />
+    <Content Include="Assets\Categories\Haber.png" />
+    <Content Include="Assets\Categories\Moda.png" />
+    <Content Include="Assets\Categories\Müzik.png" />
+    <Content Include="Assets\Categories\Sinema.png" />
+    <Content Include="Assets\Categories\Spor.png" />
+    <Content Include="Assets\Categories\Ulusal.png" />
+    <Content Include="Assets\Categories\Çocuk.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Search.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\television_alt.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Converters\Assets\Categories\Belgesel.png" />
+    <Content Include="Converters\Assets\Categories\Eğlence.png" />
+    <Content Include="Converters\Assets\Categories\Haber.png" />
+    <Content Include="Converters\Assets\Categories\Moda.png" />
+    <Content Include="Converters\Assets\Categories\Müzik.png" />
+    <Content Include="Converters\Assets\Categories\Sinema.png" />
+    <Content Include="Converters\Assets\Categories\Spor.png" />
+    <Content Include="Converters\Assets\Categories\Ulusal.png" />
+    <Content Include="Converters\Assets\Categories\Çocuk.png" />
+    <Content Include="Converters\Assets\Search.png" />
+    <Content Include="Converters\Assets\Square70x70Logo.scale-100.png" />
+    <Content Include="Converters\Assets\television_alt.png" />
+    <Content Include="Converters\Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Images\BottomMenu\Anasayfa.png" />
+    <Content Include="Images\BottomMenu\HDMenu.png" />
+    <Content Include="Images\BottomMenu\Kanallar.png" />
+    <Content Include="Images\BottomMenu\Rapor.png" />
+    <Content Include="Images\BottomMenu\Volume.png" />
+    <Content Include="Images\BottomMenu\VolumeMute.png" />
+    <Content Include="Images\BottomMenu\Yayin.png" />
+    <Content Include="Images\Favorite.png" />
+    <Content Include="Images\GTVLogo.png" />
+    <Content Include="Fonts\Sertig.otf" />
+    <Content Include="Fonts\secrcode.ttf" />
+    <Content Include="Images\MenuView\Belgesel.png" />
+    <Content Include="Images\MenuView\Belgesel_Cat.png" />
+    <Content Include="Images\MenuView\Duyurular.png" />
+    <Content Include="Images\MenuView\Eğlence.png" />
+    <Content Include="Images\MenuView\Eğlence_Cat.png" />
+    <Content Include="Images\MenuView\Favorilerim.png" />
+    <Content Include="Images\MenuView\Haber.png" />
+    <Content Include="Images\MenuView\Haber_Cat.png" />
+    <Content Include="Images\MenuView\Iletisim.png" />
+    <Content Include="Images\MenuView\Moda.png" />
+    <Content Include="Images\MenuView\Moda_Cat.png" />
+    <Content Include="Images\MenuView\Müzik.png" />
+    <Content Include="Images\MenuView\Müzik_Cat.png" />
+    <Content Include="Images\MenuView\OyVerin.png" />
+    <Content Include="Images\MenuView\Sinema.png" />
+    <Content Include="Images\MenuView\Sinema_Cat.png" />
+    <Content Include="Images\MenuView\Spor.png" />
+    <Content Include="Images\MenuView\Spor_Cat.png" />
+    <Content Include="Images\MenuView\TumKanallar.png" />
+    <Content Include="Images\MenuView\Ulusal.png" />
+    <Content Include="Images\MenuView\Ulusal_Cat.png" />
+    <Content Include="Images\MenuView\Yardim.png" />
+    <Content Include="Images\MenuView\Çocuk.png" />
+    <Content Include="Images\MenuView\Çocuk_Cat.png" />
+    <Content Include="Images\noNetwork.png" />
+    <Content Include="Images\Notifications\notifyChannelMinus.png" />
+    <Content Include="Images\Notifications\notifyChannelPlus.png" />
+    <Content Include="Images\Notifications\notifyDanger.png" />
+    <Content Include="Images\Notifications\notifyInfo.png" />
+    <Content Include="Images\Notifications\notifyWarning.png" />
+    <Content Include="Database\gtv.db" />
+    <None Include="Package.StoreAssociation.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ApplicationInsights.config" />
+    <Content Include="Fonts\Corbert-Regular.otf" />
+    <Content Include="Fonts\Aller_Lt.ttf" />
+    <Content Include="Fonts\CaviarDreams.ttf" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Converters\Assets\Logo.scale-100.png" />
+    <Content Include="Converters\Assets\SmallLogo.scale-100.png" />
+    <Content Include="Converters\Assets\SplashScreen.scale-100.png" />
+    <Content Include="Converters\Assets\StoreLogo.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ChannelDetailFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\FavoritesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MailFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\NotificationsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WatchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Callisto">
+      <HintPath>..\packages\Callisto.1.4.0\lib\netcore451\Callisto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.0.11.0-build11410\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.winmd</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.RuntimeTelemetry.0.11.0-build11410\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.winmd</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Windows">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsStore.0.11.0-build11410\lib\win81\Microsoft.ApplicationInsights.Extensibility.Windows.winmd</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Messaging.Managed">
+      <HintPath>..\packages\WindowsAzure.Messaging.Managed.0.1.7.9\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SM.Media">
+      <HintPath>..\Libraries\SM.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="SM.Media.Builder">
+      <HintPath>..\Libraries\SM.Media.Builder.dll</HintPath>
+    </Reference>
+    <Reference Include="SM.Media.Platform.Win81">
+      <HintPath>..\Libraries\SM.Media.Platform.Win81.dll</HintPath>
+    </Reference>
+    <Reference Include="SM.TsParser">
+      <HintPath>..\Libraries\SM.TsParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WinRT81, Version=3.8.9">
+      <Name>SQLite for Windows Runtime %28Windows 8.1%29</Name>
+    </SDKReference>
+    <SDKReference Include="Syncfusion 8.1 controls for WinRT XAML, Version=13.1.0.21">
+      <Name>Syncfusion 8.1 Controls for WinRT XAML</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.ApplicationInsights.0.11.0-build11410\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.0.11.0-build11410\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.0.11.0-build11410\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.0.11.0-build11410\build\portable-win81+wpa81\Microsoft.ApplicationInsights.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

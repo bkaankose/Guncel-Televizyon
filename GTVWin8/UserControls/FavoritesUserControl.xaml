@@ -1,0 +1,29 @@
+﻿<UserControl
+    x:Class="GTVWin8.UserControls.FavoritesUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GTVWin8.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="300">
+    <Grid Height="300">
+        <ScrollViewer x:Name="ProgramScroll" Background="{x:Null}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" BorderThickness="1" BorderBrush="{x:Null}" Margin="10" Height="300">
+            <ListView HorizontalAlignment="Left" x:Name="programGrid" ItemsSource="{Binding }" Background="{x:Null}" SelectionMode="None" IsItemClickEnabled="True" ItemClick="programGrid_ItemClick" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Margin="5" Source="{Binding channelImage}" Width="25" Height="30" Grid.Column="0"/>
+                            <TextBlock Grid.Column="1" Text="{Binding currentStream}" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="12" Margin="5" FontFamily="/Fonts/CaviarDreams.ttf#Caviar Dreams" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

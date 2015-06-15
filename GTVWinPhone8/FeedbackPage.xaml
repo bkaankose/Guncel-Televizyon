@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="GTVWinPhone8.FeedbackPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Margin="0,-1,0,0" Background="{StaticResource PhoneBackgroundBrush}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="35" Foreground="{StaticResource MainThemeColorBrush}">
+                <Run Text="" FontFamily="Segoe UI Symbol"  />
+                <Run Text=" " />
+                <Run Text="Iletişim" />
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Grid.Row="1" Margin="0,20" FontFamily="Segoe UI Light" FontSize="25" Foreground="{StaticResource PhoneForegroundBrush}">
+                Güncel Televizyon ile ilgili her türlü görüş , 
+                öneri ve şikayetinizi aşağıdaki formu kullanarak
+                bana iletebilirsiniz :)
+            </TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Isim" Margin="0,10" Foreground="{StaticResource MainThemeColorBrush}" />
+                <TextBox x:Name="txtSender" MaxLength="25" Grid.Row="1" Margin="-10" BorderThickness="1" />
+                <TextBlock Text="Mesaj" Margin="0,10" Foreground="{StaticResource MainThemeColorBrush}" Grid.Row="2" />
+                <TextBox MaxLength="255" Margin="-10" x:Name="txtComment" BorderThickness="1" Grid.Row="3"  TextWrapping="Wrap"  />
+                <Button x:Name="btnSend" Grid.Row="4" Click="btnSend_Click" >
+                    <TextBlock>
+                        <Run Text="" FontFamily="Segoe UI Symbol" />
+                        <Run Text=" " />
+                        <Run Text="Gönder" />
+                    </TextBlock>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>

@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="GTVWin8.UserControls.ChannelMenuControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GTVWin8.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="160"
+    d:DesignWidth="160" Height="70" Width="Auto">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+
+    <Grid Background="#FF27AE60">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="3" Margin="0,5" HorizontalAlignment="Center">
+            <Image Source="{Binding channelImage}" Width="25" Height="25" Stretch="Uniform" />
+            <TextBlock  Text="{Binding channelName}" TextAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        </StackPanel>
+        <Button Content="" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontFamily="Segoe UI Symbol" BorderThickness="1"/>
+    </Grid>
+</UserControl>
+
+
+
+

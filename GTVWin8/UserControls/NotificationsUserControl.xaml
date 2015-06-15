@@ -1,0 +1,108 @@
+﻿<UserControl
+    x:Class="GTVWin8.UserControls.NotificationsUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GTVWin8.UserControls"
+    xmlns:helpers="using:GTVWin8.Helpers"
+    xmlns:converters="using:GTVWin8.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <converters:DatetimeToCultureDateConverter x:Name="dateConverter" />
+        <converters:NotificationReadToColorConverter x:Name="colorConverter" />
+        <DataTemplate x:Key="warningTemplate">
+            <Grid Background="{Binding IsRead,Converter={StaticResource colorConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/Notifications/notifyWarning.png" Width="80" Height="70" Stretch="Uniform" />
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,25,0"   Text="{Binding notifyContent}" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                    <TextBlock Grid.Row="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Foreground="Gray" Text="{Binding notifyDate,Converter={StaticResource dateConverter}}" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="infoTemplate">
+            <Grid Background="{Binding IsRead,Converter={StaticResource colorConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/Notifications/notifyInfo.png" Width="80" Height="70" Stretch="Uniform" />
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,25,0"   Text="{Binding notifyContent}" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                    <TextBlock Grid.Row="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Foreground="Gray" Text="{Binding notifyDate,Converter={StaticResource dateConverter}}" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="channelPlusTemplate">
+            <Grid Background="{Binding IsRead,Converter={StaticResource colorConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/Notifications/notifyChannelPlus.png" Width="80" Height="70" Stretch="Uniform" />
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,25,0"   Text="{Binding notifyContent}" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                    <TextBlock Grid.Row="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Foreground="Gray" Text="{Binding notifyDate,Converter={StaticResource dateConverter}}" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="channelMinusTemplate">
+            <Grid Background="{Binding IsRead,Converter={StaticResource colorConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/Notifications/notifyChannelMinus.png" Width="80" Height="70" Stretch="Uniform" />
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,25,0"   Text="{Binding notifyContent}" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                    <TextBlock Grid.Row="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Foreground="Gray" Text="{Binding notifyDate,Converter={StaticResource dateConverter}}" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="DangerTemplate">
+            <Grid Background="{Binding IsRead,Converter={StaticResource colorConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="/Images/Notifications/notifyDanger.png" Width="80" Height="70" Stretch="Uniform" />
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,25,0"   Text="{Binding notifyContent}" Foreground="Black" FontSize="16" FontFamily="Segoe UI Light" TextWrapping="Wrap" TextTrimming="WordEllipsis" />
+                    <TextBlock Grid.Row="1"  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="12" Foreground="Gray" Text="{Binding notifyDate,Converter={StaticResource dateConverter}}" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        <helpers:NotificationTemplateSelector x:Name="notifyTemplateSelector" dangerTemplate="{StaticResource DangerTemplate}" channelPlusTemplate="{StaticResource channelPlusTemplate}" channelMinusTemplate="{StaticResource channelMinusTemplate}" warningTemplate="{StaticResource warningTemplate}" infoTemplate="{StaticResource infoTemplate}" />
+    </UserControl.Resources>
+    <Grid MaxHeight="450">
+        <ScrollViewer>
+            <ItemsControl x:Name="notificationsList" ItemTemplateSelector="{StaticResource notifyTemplateSelector}"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

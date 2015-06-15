@@ -1,0 +1,40 @@
+﻿<SettingsFlyout
+    x:Class="GTVWin8.UserControls.MailFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GTVWin8.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Iletişim"
+    d:DesignWidth="346" HeaderBackground="#FF03A678">
+
+    <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+        <!-- The StackPanel(s) below define individual content sections -->
+
+        <!-- Content Section 1-->
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+
+            <!-- Section 1 header -->
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Bana ulaşabilirsiniz" />
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>Düzeltilmesini istediğiniz ya da eklenmesini istediğiniz özellikleri aşağıdaki formu doldurarak bana iletebilirsiniz.</TextBlock.Text>
+            </TextBlock>
+
+            <!-- Section 1 body -->
+            <TextBlock TextWrapping="Wrap" Text="Isim" FontSize="20" Margin="0,5"/>
+            <TextBox x:Name="txtName" TextWrapping="Wrap" MaxLength="30"/>
+            <TextBlock TextWrapping="Wrap" Text="Mesaj" FontSize="20" Margin="0,5"/>
+            <TextBox x:Name="txtComment" TextWrapping="Wrap" MaxLength="255" Height="200" TextChanged="txtComment_TextChanged"/>
+            <TextBlock x:Name="lblCount" TextWrapping="Wrap" Text="255" FontSize="15" Margin="0,5" HorizontalAlignment="Right" FontFamily="Segoe UI Light"/>
+            <Button x:Name="btnSend" Content="Gönder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnSend_Click" Background="#B3FB1919" Foreground="White" Height="70"/>
+
+        </StackPanel>
+
+        <!-- Define more Content Sections below as necessary -->
+
+    </StackPanel>
+</SettingsFlyout>

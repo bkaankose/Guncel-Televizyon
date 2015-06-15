@@ -1,0 +1,3 @@
+<Application x:Class="GTVWin8.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"	xmlns:local="using:GTVWin8">	<Application.Resources>		<ai:TelemetryClient x:Key="ApplicationInsightsBootstrapper" xmlns:ai="using:Microsoft.ApplicationInsights"/>	</Application.Resources>
+
+</Application>
